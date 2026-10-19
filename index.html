@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+  <title>TypeRush — Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <main class="app">
+    <header class="header">
+      <a class="logo" href="#">⚡ TypeRush<span>.</span></a>
+      <div class="live-badge"><span></span> TYPING SPEED TEST</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">MASTER YOUR KEYBOARD</div>
+      <h1>Type fast.<br><span>Think faster.</span></h1>
+      <p>Tezligingni sinab ko‘r. Rekordingni yangila. Chegarangni buz!</p>
+    </section>
+
+    <section class="test-card">
+      <div class="toolbar">
+        <div class="setting">
+          <label for="language">LANGUAGE / TIL / ЯЗЫК</label>
+          <select id="language">
+            <option value="uz">🇺🇿 O‘zbekcha</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="ru">🇷🇺 Русский</option>
+          </select>
+        </div>
+
+        <div class="setting time-setting">
+          <label>TEST VAQTI</label>
+          <div class="durations">
+            <button data-time="600">10 min</button>
+            <button data-time="300">5 min</button>
+            <button data-time="180">3 min</button>
+            <button data-time="120">2 min</button>
+            <button data-time="60" class="selected">1 min</button>
+            <button data-time="30">30 sec</button>
+            <button data-time="15">15 sec</button>
+            <button data-time="5">5 sec</button>
+          </div>
+        </div>
+
+        <button id="restart" class="restart">↻ Restart</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span>⚡ WPM</span>
+          <strong id="wpm">0</strong>
+          <small>Words per minute</small>
+        </div>
+        <div class="stat">
+          <span>🎯 ACCURACY</span>
+          <strong id="accuracy">100%</strong>
+          <small>Typing accuracy</small>
+        </div>
+        <div class="stat">
+          <span>⏱️ TIME LEFT</span>
+          <strong id="time">1:00</strong>
+          <small id="timeLabel">Ready to start</small>
+        </div>
+        <div class="stat">
+          <span>❌ ERRORS</span>
+          <strong id="errors">0</strong>
+          <small>Incorrect characters</small>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress"></div>
+      </div>
+
+      <div class="typing-heading">
+        <span id="passageLabel">Matnni yozishni boshla</span>
+        <span class="keyboard-hint">⌨️ KEYBOARD</span>
+      </div>
+
+      <div id="textDisplay" class="text-display"></div>
+
+      <textarea
+        id="typingInput"
+        placeholder="Shu yerga yozishni boshla..."
+        spellcheck="false"
+        autocomplete="off"
+        autocapitalize="off"
+        aria-label="Typing test input"
+      ></textarea>
+
+      <div class="bottom">
+        <span>● Live statistics</span>
+        <span id="status">Tayyor</span>
+        <span id="best">🏆 Best: 0 WPM</span>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="trophy">🏆</div>
+      <div class="eyebrow">TEST FINISHED</div>
+      <h2>Ajoyib natija!</h2>
+      <p id="resultMessage">Mashq qilishda davom et!</p>
+
+      <div class="result-grid">
+        <div><span>WPM</span><strong id="finalWpm">0</strong></div>
+        <div><span>ACCURACY</span><strong id="finalAccuracy">100%</strong></div>
+        <div><span>ERRORS</span><strong id="finalErrors">0</strong></div>
+        <div><span>BEST WPM</span><strong id="finalBest">0</strong></div>
+      </div>
+
+      <button id="tryAgain" class="primary-btn">↻ Yana o‘ynash</button>
+    </section>
+
+    <footer>
+      <div class="footer-logo">⚡ TypeRush</div>
+      <p>Practice makes progress. Har kuni yaxshiroq!</p>
+      <p class="copyright">Typing speed test · Uzbek · English · Russian</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
